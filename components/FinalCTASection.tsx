@@ -61,7 +61,7 @@ export default function FinalCTASection() {
               <p className="text-gray-400 text-sm font-medium">掃描 QR Code 加入 LINE</p>
 
               {/*
-                File: /public/images/line-qr.png
+                File: /public/images/qr-line.png
                 → The LINE QR code image you provided.
                 Replace the img src below — it will display your actual QR Code.
               */}
@@ -73,7 +73,7 @@ export default function FinalCTASection() {
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-4 border-r-4 border-brand-red rounded-br-sm" />
 
                 <img
-                  src="/images/line-qr.png"
+                  src="/images/qr-line.png"
                   alt="LINE QR Code — Dr.stretch Taiwan 招募"
                   className="w-44 h-44 rounded-xl object-contain bg-white p-2 shadow-md"
                 />
