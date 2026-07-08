@@ -33,14 +33,14 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-5 flex items-center justify-between">
         {/*
           LOGO — Two-layer approach:
-          1. logo.png is attempted first (place at /public/images/logo.png)
+          1. logo.png is attempted first (place at /public/images/logo.svg)
           2. If missing, the styled text fallback renders automatically via onError
-          File: /public/images/logo.png  (download from Google Drive link provided)
+          File: /public/images/logo.svg  (download from Google Drive link provided)
         */}
         <a href="#" className="flex items-center gap-3 group" aria-label="Dr.stretch Taiwan トップへ">
           {/* Logo image — shows when logo.png is placed */}
           <img
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="Dr.stretch"
             className="h-9 md:h-10 w-auto object-contain brightness-0 invert"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
