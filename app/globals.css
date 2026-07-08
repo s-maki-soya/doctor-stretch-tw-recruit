@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-brand-charcoal bg-white antialiased;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-brand-black leading-tight tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-500 mt-4 leading-relaxed;
+  }
+
+  .btn-line {
+    @apply inline-flex items-center justify-center gap-2.5
+           bg-brand-line hover:bg-brand-line-dark
+           text-white font-bold text-base
+           px-8 py-4 rounded-full
+           shadow-lg hover:shadow-xl
+           transition-all duration-300
+           hover:-translate-y-0.5 active:translate-y-0 active:shadow-md;
+  }
+
+  /* Scroll-reveal utility — toggled by IntersectionObserver in each component */
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}

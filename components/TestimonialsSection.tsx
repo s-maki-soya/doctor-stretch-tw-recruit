@@ -1,0 +1,162 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
+const LINE_URL = 'https://lin.ee/s5IYRtF'
+
+/*
+  Placeholder testimonials — replace with real staff quotes.
+  Staff individual photos: place as /public/images/staff-1.jpg etc.
+  Leave imagePath as '' to show initial-letter avatar instead.
+*/
+const testimonials = [
+  {
+    name: '陳小姐',
+    age: '26 歲',
+    prev: '前美容業',
+    tenure: '入職 8 個月',
+    quote: '原本很擔心自己跟不上，但研修課程非常完整，前輩們也很親切。現在每次看到客人因為身體舒緩而露出笑容，就覺得這份工作真的很有意義。',
+    imagePath: '/images/staff-1.jpg',
+    initial: '陳',
+  },
+  {
+    name: '林先生',
+    age: '29 歲',
+    prev: '前餐飲業',
+    tenure: '入職 1 年 3 個月',
+    quote: '我完全沒有伸展背景，但公司真的從零開始教。現在已升上資深伸展師，薪水也比以前高了很多。轉換跑道的決定很正確！',
+    imagePath: '/images/staff-2.jpg',
+    initial: '林',
+  },
+  {
+    name: '王小姐',
+    age: '24 歲',
+    prev: '應屆畢業生',
+    tenure: '入職 6 個月',
+    quote: '剛畢業就加入，擔心沒工作經驗。但公司很照顧新人，每天都有成長的感覺。日系的管理制度很有條理，讓我非常安心。',
+    imagePath: '/images/staff-3.jpg',
+    initial: '王',
+  },
+]
+
+export default function TestimonialsSection() {
+  const ref = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section ref={ref} className="py-24 md:py-32 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+
+        {/* ── Team Photo Banner ───────────────────────────────────── */}
+        {/*
+          File: /public/images/team.jpg
+          → Copy the staff team photo (4 women in lime uniforms) here
+        */}
+        <div
+          className={`relative w-full h-56 md:h-72 rounded-3xl overflow-hidden mb-20 bg-gray-100 transition-all duration-700 ${
+            visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{
+            backgroundImage: "url('/images/team.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+          }}
+        >
+          {/* Dark overlay + copy */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+          <div className="absolute inset-0 flex flex-col justify-center px-10 md:px-16">
+            <p className="text-brand-lime text-xs font-bold tracking-[0.25em] uppercase mb-3">Our Team</p>
+            <h3 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+              一起成長的夥伴，<br />在這裡等你。
+            </h3>
+          </div>
+          {/* Red corner accent */}
+          <div className="absolute top-0 right-0 w-20 h-20 bg-brand-red" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
+        </div>
+
+        {/* ── Section heading ─────────────────────────────────────── */}
+        <div
+          className={`text-center mb-14 transition-all duration-700 delay-100 ${
+            visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <p className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase mb-5">Real Voices</p>
+          <h2 className="section-title">來自夥伴的真實心聲</h2>
+        </div>
+
+        {/* ── Testimonial cards ───────────────────────────────────── */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className={`relative bg-brand-cream rounded-3xl p-8 overflow-hidden group hover:shadow-lg transition-all duration-500 ${
+                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${200 + i * 100}ms` }}
+            >
+              {/* Red top accent bar on hover */}
+              <div className="absolute top-0 inset-x-0 h-1 bg-brand-red scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+
+              {/* Quote mark */}
+              <span className="absolute top-4 right-6 text-8xl font-serif text-brand-black/5 select-none leading-none">"</span>
+
+              {/* Avatar */}
+              <div className="w-16 h-16 rounded-full bg-brand-black/10 mb-5 overflow-hidden flex items-center justify-center">
+                <div
+                  className="w-full h-full bg-cover bg-center flex items-center justify-center"
+                  style={{ backgroundImage: `url('${t.imagePath}')` }}
+                >
+                  <span className="text-brand-black font-bold text-xl">{t.initial}</span>
+                </div>
+              </div>
+
+              <div className="mb-1">
+                <span className="font-bold text-brand-black text-lg">{t.name}</span>
+                <span className="text-gray-400 text-sm ml-2">{t.age}</span>
+              </div>
+              <p className="text-xs text-gray-400 mb-3">
+                {t.prev} → <span className="text-brand-black font-medium">{t.tenure}</span>
+              </p>
+              <div className="w-8 h-0.5 bg-brand-red mb-4" />
+              <p className="text-gray-600 text-sm leading-relaxed relative z-10">{t.quote}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA nudge */}
+        <div
+          className={`text-center mt-14 transition-all duration-700 delay-500 ${
+            visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <a
+            href={LINE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-line"
+          >
+            <LineIcon />
+            我也想加入這個團隊
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LineIcon() {
+  return (
+    <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+    </svg>
+  )
+}
