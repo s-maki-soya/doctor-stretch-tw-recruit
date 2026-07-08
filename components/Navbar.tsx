@@ -50,8 +50,7 @@ export default function Navbar() {
           {/* Text fallback — always rendered; hidden by JS if image loads */}
           <span
             className="font-bold text-2xl md:text-3xl tracking-wide text-white leading-none"
-            style={{ display: logoLoaded ? 'none' : 'inline' }}
-            style={{ fontFamily: 'var(--font-sans, sans-serif)' }}
+            style={{ display: logoLoaded ? 'none' : 'inline', fontFamily: 'var(--font-sans, sans-serif)' }}
           >
             <span className="italic font-black text-white">Dr.</span>
             <span className="font-black">stretch</span>
