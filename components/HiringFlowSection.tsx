@@ -58,12 +58,6 @@ export default function HiringFlowSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 relative">
-          {/* Connector line (desktop) */}
-          <div
-            className="hidden md:block absolute top-10 left-[calc(16.67%+1.25rem)] right-[calc(16.67%+1.25rem)] h-px bg-brand-red/30"
-            aria-hidden="true"
-          />
-
           {steps.map((s, i) => (
             <div
               key={i}

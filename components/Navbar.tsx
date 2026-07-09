@@ -14,7 +14,6 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [logoLoaded, setLogoLoaded] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -44,17 +43,9 @@ export default function Navbar() {
             src="/images/logo.svg"
             alt="Dr.stretch"
             className="h-9 md:h-10 w-auto object-contain brightness-0 invert"
-            onLoad={() => setLogoLoaded(true)}
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
           />
-          {/* Text fallback — always rendered; hidden by JS if image loads */}
-          <span
-            className="font-bold text-2xl md:text-3xl tracking-wide text-white leading-none"
-            style={{ display: logoLoaded ? 'none' : 'inline', fontFamily: 'var(--font-sans, sans-serif)' }}
-          >
-            <span className="italic font-black text-white">Dr.</span>
-            <span className="font-black">stretch</span>
-          </span>
+
           {/* TAIWAN sub-label */}
           <span className="hidden sm:inline text-xs font-normal text-white/50 tracking-widest ml-1">
             TAIWAN

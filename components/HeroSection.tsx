@@ -106,7 +106,7 @@ export default function HeroSection() {
 
         {/* Trust badges */}
         <div
-          className={`flex flex-wrap justify-center gap-x-8 gap-y-2 mt-14 transition-all duration-700 delay-500 ${
+          className={`flex flex-wrap justify-center gap-x-8 gap-y-2 mt-14 mb-16 transition-all duration-700 delay-500 ${
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
         >

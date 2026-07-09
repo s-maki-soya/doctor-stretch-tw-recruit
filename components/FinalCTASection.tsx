@@ -66,11 +66,6 @@ export default function FinalCTASection() {
                 Replace the img src below — it will display your actual QR Code.
               */}
               <div className="relative">
-                {/* Red corner accents */}
-                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-4 border-l-4 border-brand-red rounded-tl-sm" />
-                <div className="absolute -top-2 -right-2 w-6 h-6 border-t-4 border-r-4 border-brand-red rounded-tr-sm" />
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-4 border-l-4 border-brand-red rounded-bl-sm" />
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-4 border-r-4 border-brand-red rounded-br-sm" />
 
                 <img
                   src="/images/qr-line.png"
