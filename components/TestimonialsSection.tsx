@@ -19,6 +19,15 @@ const testimonials = [
     imagePath: '/images/staff-1.jpg',
     initial: '',
   },
+  {
+    name: '',
+    age: '',
+    prev: '',
+    tenure: '入職六年兩個月',
+    quote: '公司沒有過多的硬性規範限制，而是給予每個人發揮與成長的空間。團隊之間相處融洽，工作氛圍單純且互相支持。在這裡，不會因為年資或背景而限制發展，只要願意努力，並朝著正確的方向前進，就有機會獲得自己想要的成果與成長。如果你希望在一個能發揮自己的舞台上，不斷挑戰與提升自己，這裡會是一個值得加入的地方。',
+    imagePath: '/images/staff-2.jpg',
+    initial: '',
+  },
 ]
 
 export default function TestimonialsSection() {
@@ -76,11 +85,11 @@ export default function TestimonialsSection() {
         </div>
 
         {/* ── Testimonial cards ───────────────────────────────────── */}
-        <div className="flex justify-center">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`relative bg-brand-cream rounded-3xl p-8 overflow-hidden group hover:shadow-lg transition-all duration-500 w-full max-w-2xl ${
+              className={`relative bg-brand-cream rounded-3xl p-8 overflow-hidden group hover:shadow-lg transition-all duration-500 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${200 + i * 100}ms` }}
