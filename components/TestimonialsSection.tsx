@@ -11,31 +11,13 @@ const LINE_URL = 'https://lin.ee/s5IYRtF'
 */
 const testimonials = [
   {
-    name: '陳小姐',
-    age: '26 歲',
-    prev: '前美容業',
-    tenure: '入職 8 個月',
-    quote: '原本很擔心自己跟不上，但研修課程非常完整，前輩們也很親切。現在每次看到客人因為身體舒緩而露出笑容，就覺得這份工作真的很有意義。',
+    name: '',
+    age: '',
+    prev: '前健身教練',
+    tenure: '入職四年三個月',
+    quote: '完整的培訓制度、公開透明且人人有機會的升遷管道、海外進修機會，如果你也想找一個適合自己的事業、Dr.Stretch將會成為你最好的創業夥伴！從零經驗到世界級國際人才、這個大舞台等你來挑戰！',
     imagePath: '/images/staff-1.jpg',
-    initial: '陳',
-  },
-  {
-    name: '林先生',
-    age: '29 歲',
-    prev: '前餐飲業',
-    tenure: '入職 1 年 3 個月',
-    quote: '我完全沒有伸展背景，但公司真的從零開始教。現在已升上資深伸展師，薪水也比以前高了很多。轉換跑道的決定很正確！',
-    imagePath: '/images/staff-2.jpg',
-    initial: '林',
-  },
-  {
-    name: '王小姐',
-    age: '24 歲',
-    prev: '應屆畢業生',
-    tenure: '入職 6 個月',
-    quote: '剛畢業就加入，擔心沒工作經驗。但公司很照顧新人，每天都有成長的感覺。日系的管理制度很有條理，讓我非常安心。',
-    imagePath: '/images/staff-3.jpg',
-    initial: '王',
+    initial: '',
   },
 ]
 
@@ -94,11 +76,11 @@ export default function TestimonialsSection() {
         </div>
 
         {/* ── Testimonial cards ───────────────────────────────────── */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="flex justify-center">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`relative bg-brand-cream rounded-3xl p-8 overflow-hidden group hover:shadow-lg transition-all duration-500 ${
+              className={`relative bg-brand-cream rounded-3xl p-8 overflow-hidden group hover:shadow-lg transition-all duration-500 w-full max-w-2xl ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${200 + i * 100}ms` }}

@@ -110,7 +110,7 @@ export default function HeroSection() {
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          {['✓ 未經驗OK', '✓ 完整研修', '✓ 日系品牌', '✓ 明確晉升制度'].map((badge) => (
+          {['✓ 無經驗OK', '✓ 完整研修', '✓ 日系品牌', '✓ 明確晉升制度'].map((badge) => (
             <span key={badge} className="text-sm text-white/60 font-medium">
               {badge}
             </span>

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 const stats = [
   { value: '日本發源', label: '頂尖伸展品牌', note: '科學根據的施術技術' },
   { value: '多店展開', label: '台灣持續展店中', note: '穩定成長的職場' },
-  { value: '完整研修', label: '入職即開始培訓', note: '零基礎也能成為專業師' },
+  { value: '完整研修', label: '入職即開始培訓', note: '零基礎也能成為專業訓練師' },
   { value: '明確晉升', label: '職涯路徑清晰', note: '努力就能晉升' },
 ]
 

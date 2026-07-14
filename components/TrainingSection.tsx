@@ -157,7 +157,7 @@ export default function TrainingSection() {
         >
           <div className="inline-flex items-center gap-3 bg-brand-lime/10 border border-brand-lime/25 rounded-full px-8 py-3 mb-8">
             <span className="text-brand-lime font-bold">✓</span>
-            <span className="text-brand-lime/80 text-sm font-medium">研修期間も薪資全額保障</span>
+            <span className="text-brand-lime/80 text-sm font-medium">研修期間薪資全額保障</span>
           </div>
           <br />
           <a
