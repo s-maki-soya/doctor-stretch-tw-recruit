@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
               <span className="absolute top-4 right-6 text-8xl font-serif text-brand-black/5 select-none leading-none">"</span>
 
               {/* Avatar */}
-              <div className="w-16 h-16 rounded-full bg-brand-black/10 mb-5 overflow-hidden flex items-center justify-center">
+              <div className="w-28 h-28 rounded-full bg-brand-black/10 mb-6 overflow-hidden flex items-center justify-center">
                 <div
                   className="w-full h-full bg-cover bg-center flex items-center justify-center"
                   style={{ backgroundImage: `url('${t.imagePath}')` }}
@@ -114,11 +114,11 @@ export default function TestimonialsSection() {
                 <span className="font-bold text-brand-black text-lg">{t.name}</span>
                 <span className="text-gray-400 text-sm ml-2">{t.age}</span>
               </div>
-              <p className="text-xs text-gray-400 mb-3">
+              <p className="text-sm text-gray-400 mb-4">
                 {t.prev} → <span className="text-brand-black font-medium">{t.tenure}</span>
               </p>
               <div className="w-8 h-0.5 bg-brand-red mb-4" />
-              <p className="text-gray-600 text-sm leading-relaxed relative z-10">{t.quote}</p>
+              <p className="text-gray-600 text-base leading-relaxed relative z-10">{t.quote}</p>
             </div>
           ))}
         </div>
