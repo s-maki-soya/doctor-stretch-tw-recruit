@@ -28,6 +28,15 @@ const testimonials = [
     imagePath: '/images/staff-2.jpg',
     initial: '',
   },
+  {
+    name: '',
+    age: '',
+    prev: '',
+    tenure: '',
+    quote: '在這裡，你不是一個人單打獨鬥，而是一群人一起前進！沒有相關經驗也能跟開心的跟夥伴互相激勵成長！探索出屬於自己的未來！如果你也在找尋這樣的工作環境，我想你ㄧ定要來Dr.stretch試試！',
+    imagePath: '/images/staff-3.jpg',
+    initial: '',
+  },
 ]
 
 export default function TestimonialsSection() {
@@ -85,7 +94,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* ── Testimonial cards ───────────────────────────────────── */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div
               key={i}
