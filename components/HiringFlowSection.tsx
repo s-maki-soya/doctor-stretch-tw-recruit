@@ -15,8 +15,8 @@ const steps = [
   {
     num: '02',
     emoji: '🏪',
-    title: '面試・門市參觀',
-    body: '與負責人進行輕鬆的面談，並實際參觀我們的門市。不需要準備特別的資料，輕鬆前來即可。',
+    title: '面試',
+    body: '與負責人進行輕鬆的面談。不需要準備特別的資料，輕鬆前來即可。',
     note: '約 60 分鐘',
   },
   {
@@ -93,7 +93,7 @@ export default function HiringFlowSection() {
             <LineIcon />
             立即 LINE 諮詢（免費）
           </a>
-          <p className="text-white/25 text-sm mt-4">問了再決定也完全 OK</p>
+          <p className="text-white/25 text-sm mt-4">問了再決定也沒問題</p>
         </div>
       </div>
     </section>

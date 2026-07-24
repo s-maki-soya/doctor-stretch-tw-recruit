@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-  { value: '日本發源', label: '頂尖伸展品牌', note: '科學根據的施術技術' },
-  { value: '多店展開', label: '台灣持續展店中', note: '穩定成長的職場' },
+  { value: '源自日本', label: '頂尖伸展品牌', note: '以運動科學為基礎發展而成的技術' },
+  { value: '多店展開', label: '台灣持續擴店中', note: '穩定成長的企業' },
   { value: '完整研修', label: '入職即開始培訓', note: '零基礎也能成為專業訓練師' },
   { value: '明確晉升', label: '職涯路徑清晰', note: '努力就能晉升' },
 ]
@@ -36,14 +36,14 @@ export default function BrandSection() {
             }`}
           >
             <p className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase mb-5">About Dr.stretch</p>
-            <h2 className="section-title mb-6">來自日本的<br />頂級伸展體驗</h2>
+            <h2 className="section-title mb-6">來自日本的<br />頂級伸展技術</h2>
             <div className="w-12 h-1 bg-brand-red mb-6" />
             <p className="text-gray-600 text-lg leading-relaxed">
-              Dr.stretch 是源自日本的專業伸展品牌，以科學為基礎的徒手伸展技術，
-              讓客人在短短60分鐘內感受身體深層的舒緩與改變。
+              Dr.stretch 是源自日本的專業伸展品牌，以運動科學為基礎的徒手伸展技術，
+              讓客人能在短短60分鐘內感受到身體深層的舒緩與改變。
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mt-4">
-              目前在台灣積極展店，誠邀有心的夥伴一同成長，共同打造台灣最好的伸展體驗。
+              目前在台灣積極擴店中，誠邀有心的夥伴一同成長，共同打造台灣最好的伸展品牌。
             </p>
           </div>
 

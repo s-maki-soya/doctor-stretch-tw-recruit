@@ -19,7 +19,7 @@ const targets = [
     emoji: '📈',
     tag: '積極上進',
     title: '認真工作，希望付出有所回報的你',
-    body: '清楚的晉升制度和業績獎金，讓你的努力直接反映在職位和薪水上。越認真，越有回報。',
+    body: '明確的晉升制度和業績獎金，讓你的努力直接反映在職位和薪水上。越認真，越有回報。',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function TargetSection() {
         >
           <div className="inline-flex items-center gap-3 bg-brand-red/8 border border-brand-red/25 rounded-full px-8 py-4">
             <span className="text-brand-red font-bold text-xl">✦</span>
-            <span className="text-brand-black font-bold">完全歡迎無相關工作經驗的應徵者</span>
+            <span className="text-brand-black font-bold">歡迎無相關工作經驗的應徵者</span>
           </div>
         </div>
       </div>

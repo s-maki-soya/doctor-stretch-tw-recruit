@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
           <div className="absolute inset-0 flex flex-col justify-center px-10 md:px-16">
             <p className="text-brand-lime text-xs font-bold tracking-[0.25em] uppercase mb-3">Our Team</p>
             <h3 className="text-2xl md:text-4xl font-bold text-white leading-tight">
-              一起成長的夥伴，<br />在這裡等你。
+              想跟你一起成長的夥伴們，<br />在這裡等你。
             </h3>
           </div>
           {/* Red corner accent */}

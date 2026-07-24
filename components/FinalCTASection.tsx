@@ -53,7 +53,7 @@ export default function FinalCTASection() {
                 免費 LINE 諮詢
               </a>
 
-              <p className="text-gray-300 text-sm mt-5">免費・無壓力・問了再決定也 OK</p>
+              <p className="text-gray-300 text-sm mt-5">免費・無壓力・問了再決定也沒問題</p>
             </div>
 
             {/* Right: QR code */}
