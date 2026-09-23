@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection'
 import BrandSection from '@/components/BrandSection'
 import TargetSection from '@/components/TargetSection'
 import BenefitsSection from '@/components/BenefitsSection'
+import WelfareSection from '@/components/WelfareSection'
 import TrainingSection from '@/components/TrainingSection'
 import DailyScheduleSection from '@/components/DailyScheduleSection'
 import TestimonialsSection from '@/components/TestimonialsSection'
@@ -20,6 +21,7 @@ export default function Page() {
         <BrandSection />
         <TargetSection />
         <BenefitsSection />
+        <WelfareSection />
         <TrainingSection />
         <DailyScheduleSection />
         <TestimonialsSection />
@@ -28,7 +30,10 @@ export default function Page() {
         <FinalCTASection />
       </main>
       <footer className="bg-brand-black py-10 text-center">
-        <p className="text-white/40 text-sm">© 2024 Dr.stretch Taiwan. All rights reserved.</p>
+        <a href="/privacy" className="text-white/40 hover:text-white/70 text-sm underline underline-offset-2 transition-colors">
+          隱私權政策
+        </a>
+        <p className="text-white/40 text-sm mt-3">© 2024 Dr.stretch Taiwan. All rights reserved.</p>
       </footer>
       <FloatingCTA />
     </>
